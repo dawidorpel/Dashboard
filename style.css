@@ -456,15 +456,33 @@ body{
     width: 40px;
     height: 40px;
     border-radius: 50%;
+    object-fit: cover;
 }
 
+.content main .bottom-data .orders table tbody tr{
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
 
+.content main .bottom-data .orders table tbody tr:hover{
+    background: var(--grey);
+}
 
+.content main .bottom-data .orders table tr td .status{
+    font-size: 10px;
+    padding: 6px 16px;
+    color: var(--light);
+    border-radius: 20px;
+    font-weight: 700;
+}
+.content main .bottom-data .orders table tr td .status.completed{
+    background: var(--success);
+}
+.content main .bottom-data .orders table tr td .status.process{
+    background: var(--primary);
+}
 
-
-
-
-
-
-
+.content main .bottom-data .orders table tr td .status.pending{
+    background: var(--warning);
+}
 
