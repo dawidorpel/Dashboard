@@ -58,6 +58,7 @@ body{
     scrollbar-width: none;
     transition: all 0.3s ease;
 }
+
 .Sidebar::-webkit-scrollbar{
     display: none;
 }
@@ -106,7 +107,9 @@ body{
     background: var(--grey);
     position: relative;
 }
-
+.Sidebar .side-menu li:hover{
+    background: var(--grey);
+}
 .Sidebar .side-menu li.active::before{
     content: "";
     position: absolute;
@@ -365,6 +368,15 @@ body{
     grid-gap: 24px;
     cursor: pointer;
 }
+.content main .insights li i{
+    transition: all 0.3s ease;
+}
+.content main .insights li i:hover{
+    width: 100px;
+    height: 100px;
+    transition: all 0.3s ease;
+}
+
 .content main .insights li .bx{
     width: 80px;
     height: 80px;
@@ -377,18 +389,22 @@ body{
 .content main .insights li:nth-child(1) .bx{
     background: var(--light-primary);
     color: var(--primary);
+    box-shadow: 1px 1px 15px;
 }
 .content main .insights li:nth-child(2) .bx{
     background: var(--light-warning);
     color: var(--warning);
+    box-shadow: 1px 1px 15px;
 }
 .content main .insights li:nth-child(3) .bx{
     background: var(--light-success);
     color: var(--success);
+    box-shadow: 1px 1px 15px;
 }
 .content main .insights li:nth-child(4) .bx{
     background: var(--light-danger);
     color: var(--danger);
+    box-shadow: 1px 1px 15px;
 }
 .content main .insights li .info h3{
     font-size: 24px;
@@ -457,6 +473,7 @@ body{
     height: 40px;
     border-radius: 50%;
     object-fit: cover;
+    box-shadow: 2px 2px 5px;
 }
 
 .content main .bottom-data .orders table tbody tr{
@@ -477,12 +494,15 @@ body{
 }
 .content main .bottom-data .orders table tr td .status.completed{
     background: var(--success);
+    box-shadow: 1px 1px 15px var(--success);
 }
 .content main .bottom-data .orders table tr td .status.process{
     background: var(--primary);
+    box-shadow: 1px 1px 15px var(--primary);
 }
 
 .content main .bottom-data .orders table tr td .status.pending{
     background: var(--warning);
+    box-shadow: 1px 1px 15px var(--warning);
 }
 
