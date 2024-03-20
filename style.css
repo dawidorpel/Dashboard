@@ -506,3 +506,58 @@ body{
     box-shadow: 1px 1px 15px var(--warning);
 }
 
+.content main .bottom-data .reminders{
+    flex-grow: 1;
+    flex-basis: 300px;
+}
+.content main .bottom-data .reminders .task-list{
+    width: 100%;
+}
+
+.content main .bottom-data .reminders .task-list li{
+    width: 100%;
+    margin-bottom: 16px;
+    background: var(--grey);
+    padding: 14px 10px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.content main .bottom-data .reminders .task-list li .task-title {
+    display: flex;
+    align-items: center;
+}
+
+.content main .bottom-data .reminders .task-list li .task-title p{
+    margin-left: 6px;
+}
+
+.content main .bottom-data .reminders .task-list li .task-title .bx{
+    cursor: pointer;
+}
+
+.content main .bottom-data .reminders .task-list li.completed {
+    background-color: var(--success);
+    box-shadow: 2px 2px 15px var(--success);
+}
+
+.content main .bottom-data .reminders .task-list li.not-completed{
+    border-left: 10px solid var(--danger);
+    animation-name: warning ;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+.content main .bottom-data .reminders .task-list li:last-child{
+    margin-bottom: 0;
+}
+
+@keyframes warning{
+    0%{box-shadow: 5px 5px 30px var(--danger);}
+    25%{box-shadow: 5px 5px 30px var(--grey);}
+    50%{box-shadow: 5px 5px 30px var(--danger);}
+    75%{box-shadow: 5px 5px 30px var(--grey);}
+    100%{box-shadow: 5px 5px 30px var(--danger);}
+}
+
