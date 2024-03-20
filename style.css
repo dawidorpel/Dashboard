@@ -635,4 +635,16 @@ body{
     .content nav form.show~.notif, .content nav form.show~.profile{
         display: none;
     }
+    .content main .insights{
+        grid-template-columns: 1fr;
+    }
+    .content main .bottom-data .header{
+        min-width: 340px;
+    }
+    .content main .bottom-data .orders table{
+        min-width: 340px;
+    }
+    .content main .bottom-data .task-list{
+        min-width: 340px;
+    }
 }

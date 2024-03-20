@@ -26,9 +26,31 @@ sideLinks.forEach(item => {
         e.preventDefault;
         searchForm.classList.toggle('show');
         if(searchForm.classList.contains('show')){
-            searchBtnIcon.classList.replace('bx-search', 'bx-x');
+            searchBtnIcon.classList.replace('bx-search-alt', 'bx-x');
         }else{
-            searchBtnIcon.classList.replace('bx-x', 'bx-search')
+            searchBtnIcon.classList.replace('bx-x', 'bx-search-alt')
         }
+    }
+   })
+
+   window.addEventListener('resize', () =>{
+    if(window.innerWidth < 768){
+        sideBar.classList.add('close');
+    }else{
+        sideBar.classList.remove('close');
+    }
+    if(window.innerWidth > 576){
+        searchBtnIcon.classList.replace('bx-x', 'bs-search-alt');
+        searchForm.classList.remove('show');
+    }
+   });
+
+   const toggle = document.getElementById('theme-toggle');
+
+   toggle.addEventListener('change', function() {
+    if(this.checked){
+        document.body.classList.add('dark');
+    }else{
+        document.body.classList.remove('dark');
     }
    })
