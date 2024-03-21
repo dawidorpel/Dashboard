@@ -367,6 +367,7 @@ body{
     align-items: center;
     grid-gap: 24px;
     cursor: pointer;
+    box-shadow: 1px 1px 5px;
 }
 .content main .insights li i{
     transition: all 0.3s ease;
@@ -442,6 +443,7 @@ body{
     background: var(--light);
     padding: 24px;
     overflow-x: auto;
+    box-shadow: 1px 1px 5px;
 }
 .content main .bottom-data header{
     display: flex;
